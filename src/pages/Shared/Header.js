@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Nav } from 'react-bootstrap';
-import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import Navbar from 'react-bootstrap/Navbar'
 
 const Header = () => {
