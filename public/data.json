@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "name": "Student Visa Consultency",
+        "description": "Are you looking for student visa consultants to study in the USA, Canada, the UK, Europe, or Australia?Your career choice could be personal, such as how you approach the different processes, qualify for a program or go about applying for courses and visas. Here, you need the assistance of qualified, competent, extremely knowledgeable consultant! , Here i am RCIC certified immigration and visa consultant",
+        "image": "https://img.freepik.com/free-photo/graduation-concept-with-portrait-happy-girl_23-2148201880.jpg?t=st=1650201528~exp=1650202128~hmac=5506e902cdad65d17bcfd479a48c52dc3f54edbdbf99bac69607a3b46cab6f23&w=1060",
+        "price": 200
+    },
+    {
+        "id": "2",
+        "name": "Canada Immigration Consultency",
+        "description": "Are you looking for PR in canada ?? Here I am  RCIC certified immigration and visa consultant help you to get immegrent visa like Express entry , Provincial Nominee Program, Atlantic Immigration Pilot Program etc",
+        "image": "https://img.freepik.com/free-photo/visa-application-composition-with-canadian-flag_23-2149117799.jpg?w=900&t=st=1650202181~exp=1650202781~hmac=9b47cbeecad57513a12a3e9031429d68044c9df64f6613dfca2c781550f1a934",
+        "price": 550
+    },
+    {
+        "id": "3",
+        "name": "Work permit Visa Consultency",
+        "description": "Are you looking for work permit visa?? Here I am RCIC certified immigration and visa consultant help you to get work permit visa for many countries like Australia, Canada, Usa, Germany , Maleyshia etc. If you have a skilled worker its high posibilities to get visa those country. So connect with me for happy service ",
+        "image": "https://img.freepik.com/free-photo/graduation-concept-with-portrait-happy-girl_23-2148201880.jpg?t=st=1650201528~exp=1650202128~hmac=5506e902cdad65d17bcfd479a48c52dc3f54edbdbf99bac69607a3b46cab6f23&w=1060",
+        "price": 420
+    }
+]
