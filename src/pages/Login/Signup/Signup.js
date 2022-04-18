@@ -54,7 +54,7 @@ const Signup = () => {
     }
 
     return (
-        <div className="container mx-auto w-25" style={{backgroundColor: 'aliceblue'}}>
+        <div className="container mx-auto w-50" style={{backgroundColor: 'aliceblue'}}>
             <h1 className="text-success">Please Signup</h1>
             <Form onSubmit={handleSignup}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
