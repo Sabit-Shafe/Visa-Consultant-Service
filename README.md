@@ -1,3 +1,17 @@
+#<h1>Live site link --</h1>
+
+https://proudct-review-shafe.netlify.app/
+
+# <h1>Project specification </h1>
+
+* In this Project working with react js.
+* UI design by react-bootstrap and responsive
+* Uses react-router to navigate specific page without reload.
+* Implement authentication by using firebase
+* Login logout form build and login with email password.
+* Social media login google and github.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
