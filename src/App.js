@@ -9,6 +9,7 @@ import NotFound from './pages/Shared/NotFound';
 import Chekout from './pages/Chekout/Chekout';
 import Login from './pages/Login/Login/Login';
 import Signup from './pages/Login/Signup/Signup';
+import RequireAuth from './pages/Login/RequireAuth/RequireAuth';
 
 
 function App() {
@@ -23,7 +24,11 @@ function App() {
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="/chekout" element ={<Chekout></Chekout>}></Route>
+        <Route path="/chekout" element={
+          <RequireAuth>
+            <Chekout></Chekout>
+          </RequireAuth>
+        }></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

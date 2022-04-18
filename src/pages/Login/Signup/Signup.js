@@ -1,8 +1,17 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init'
 
 const Signup = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
+
 
     const emailRef = useRef('');
     const passRef = useRef('');
@@ -12,13 +21,22 @@ const Signup = () => {
     const navigateLogin = ()=>{
         navigate('/login');
     }
+
+    if(user){
+        navigate('/home')
+    }
+
     const handleSignup = (event) => {
         event.preventDefault();
+        const name = nameRef.current.value;
+        const email = emailRef.current.value;
+        const password = passRef.current.value;
+        createUserWithEmailAndPassword(email, password);
     }
 
     return (
             <div className="container mx-auto w-25">
-                <h1>Please Login</h1>
+                <h1>Please Signup</h1>
                 <Form onSubmit={handleSignup}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Your Name</Form.Label>
@@ -45,7 +63,7 @@ const Signup = () => {
                         Submit
                     </Button>
                 </Form>
-                <p>Already have an account? Please <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Register</Link> </p>
+                <p>Already have an account? Please <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
             </div>
             );
 };

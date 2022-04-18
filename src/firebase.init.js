@@ -6,16 +6,17 @@ import {getAuth} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey:process.env.REACT_APP_apiKey,
-  authDomain:process.env.REACT_APP_authDomain,
-  projectId:process.env.REACT_APP_projectId,
-  storageBucket:process.env.REACT_APP_storageBucket,
-  messagingSenderId:process.env.REACT_APP_messagingSenderId,
-  appId:process.env.REACT_APP_appId,
+  apiKey: "AIzaSyC1p70_igOlvui4rnTv_6UNFK-p3qgBQaw",
+  authDomain: "visa-consultant-2f7c5.firebaseapp.com",
+  projectId: "visa-consultant-2f7c5",
+  storageBucket: "visa-consultant-2f7c5.appspot.com",
+  messagingSenderId: "79495541773",
+  appId: "1:79495541773:web:37f8696ae84a074df5d144"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
 
 const auth = getAuth(app);
 
