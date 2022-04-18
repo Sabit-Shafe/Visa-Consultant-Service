@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const [
@@ -36,6 +37,13 @@ const Login = () => {
     // if(user){
     //     navigate('/home')
     // }
+    let errorElement;
+
+    
+
+    if (error){
+        errorElement = <p className='text-danger'>Error: {error?.message} </p>
+    }
 
 
     return (
@@ -61,7 +69,9 @@ const Login = () => {
                     Submit
                 </Button>
             </Form>
+            {errorElement}
             <p>New to this site? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+            <SocialLogin></SocialLogin>
         </div>
     );
 };

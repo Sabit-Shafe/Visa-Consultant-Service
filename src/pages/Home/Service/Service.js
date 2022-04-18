@@ -16,7 +16,7 @@ const Service = ({service}) => {
     return (
         <div className="g-5 col-sm-12 col-md-6 col-lg-4">
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={image} />
+                <Card.Img variant="top" className="" src={image} />
                 <Card.Body>
                     <Card.Title className="text-info">{name}</Card.Title>
                     <Card.Text>
