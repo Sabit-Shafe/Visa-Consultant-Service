@@ -7,7 +7,7 @@ import { Form } from 'react-bootstrap';
 const Chekout = () => {
     const [agree, setAgree] = useState(false);
     const initialValues = { username: '', email: '', mobileNo: '', address: '' };
-    const [formValues, setFormvalues] = useState(initialValues);
+    const [formValues] = useState(initialValues);
     // const { serviceID } = useParams();
 
 

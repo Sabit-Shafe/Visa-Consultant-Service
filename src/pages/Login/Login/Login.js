@@ -7,6 +7,7 @@ import Load from '../../Shared/Load/Load';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
     const [
         signInWithEmailAndPassword,
@@ -68,7 +69,8 @@ const Login = () => {
 
 
     return (
-        <div className="container mx-auto w-25">
+        <div style={{backgroundColor: 'azure'}} >
+        <div className="container mx-auto w-25" style={{backgroundColor: 'aliceblue'}}>
             <h1 className="text-success">Please Login</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -92,6 +94,7 @@ const Login = () => {
             <p>New to this site? <Link to="/signup" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
             <SocialLogin></SocialLogin>
             <ToastContainer></ToastContainer>
+        </div>
         </div>
     );
 };
