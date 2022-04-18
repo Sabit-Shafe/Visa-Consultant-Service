@@ -13,8 +13,10 @@ const Signup = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    
+
 
     
 
@@ -30,8 +32,13 @@ const Signup = () => {
     if (user) {
         navigate('/home')
     }
-    if(loading || updating){
+    if (loading || updating) {
         return <Load></Load>
+    }
+    let errorElement;
+    
+    if (error){
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
     const handleSignup = async (event) => {
@@ -39,15 +46,16 @@ const Signup = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passRef.current.value;
+        
         await createUserWithEmailAndPassword(email, password);
-        await updateProfile({name});
+        await updateProfile({ name });
         navigate('/home')
 
     }
 
     return (
         <div className="container mx-auto w-25">
-            <h1>Please Signup</h1>
+            <h1 className="text-success">Please Signup</h1>
             <Form onSubmit={handleSignup}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Your Name</Form.Label>
@@ -71,13 +79,14 @@ const Signup = () => {
                     <Form.Check onClick={() => setAgree(!agree)} className={`ps-3 ${agree ? '' : 'text-danger'}`} type="checkbox" label="Accept terms and conditions" />
                 </Form.Group>
                 <Button
-                disabled={!agree}
-                type="submit"
-                value="Signup" 
-                className ="w-50 mx-auto d-block mb-5" variant="primary">
+                    disabled={!agree}
+                    type="submit"
+                    value="Signup"
+                    className="w-50 mx-auto d-block mb-5" variant="primary">
                     Sign up
                 </Button>
             </Form>
+            {errorElement} 
             <p>Already have an account? Please <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
             <SocialLogin></SocialLogin>
         </div>

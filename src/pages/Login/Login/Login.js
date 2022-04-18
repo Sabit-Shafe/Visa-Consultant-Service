@@ -23,7 +23,7 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     if (user) {
         navigate(from, { replace: true });
-    }
+    };
     
 
     const handleSubmit = event => {
@@ -31,6 +31,7 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         signInWithEmailAndPassword(email, password);
+
 
     }
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
@@ -68,7 +69,7 @@ const Login = () => {
 
     return (
         <div className="container mx-auto w-25">
-            <h1>Please Login</h1>
+            <h1 className="text-success">Please Login</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
